@@ -9,6 +9,7 @@ public class GameOverPanelController : MonoBehaviour
     [SerializeField] private Button _restartButton;
     void Start()
     {
+        _restartButton.onClick.RemoveAllListeners();
         _restartButton.onClick.AddListener(RestartGame);
     }
 
