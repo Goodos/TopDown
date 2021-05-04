@@ -6,21 +6,28 @@ public class MovementController : Player
     private Vector3 _targetPosition;
     private Vector3 _directionVector;
     private Vector3 _targetToMove;
-    private bool _canMove = true;
     private float _speed = 10f;
+    private LayerMask _ignoreMe;
 
     void Start()
     {
         _cc = GetComponent<CharacterController>();
+        _ignoreMe = 1 << 8;
+        _ignoreMe = ~_ignoreMe;
     }
 
     void Update()
     {
-        if (_canMove && Input.GetMouseButtonDown(0))
+        //Debug.Log(HP);
+        if (!GameController.singleton.CanMove)
+        {
+            _targetToMove = transform.position;
+        }
+        if (GameController.singleton.CanMove && Input.GetMouseButtonDown(0))
         {
             ClickToMove();
         }
-        if (_canMove)
+        if (GameController.singleton.CanMove)
         {
             Movement(_targetToMove);
         }
@@ -29,11 +36,11 @@ public class MovementController : Player
     void ClickToMove()
     {
         RaycastHit hit;
-        if (!Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
+        if (!Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100, _ignoreMe))
             return;
         if (!hit.transform)
             return;
-        if (!hit.transform.CompareTag("Player"))
+        if (hit.transform.CompareTag("Ground"))
         {
             _targetToMove = new Vector3(hit.point.x, 0, hit.point.z);
             transform.LookAt(new Vector3(_targetToMove.x, _cc.height / 2f));

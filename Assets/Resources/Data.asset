@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8edf37bd24c5a4f8c83c1a1bce54b5, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  FirstSceneTeleport: {fileID: 3263030199462776132, guid: 265a36d26430f3e4d8bde211e4c4cdba,
+    type: 3}
+  FirstTeleport: {fileID: 4648915582525631375, guid: 49dc48d331db8674497e87868e568810,
+    type: 3}
+  SecondTeleport: {fileID: 4670557033716540009, guid: 92507b5f944a91241a40a8b18e56a60f,
+    type: 3}
+  ThirdTeleport: {fileID: 1107547396652439721, guid: 4ec0088edc393564db55f260a4d8e545,
+    type: 3}
+  FourthTeleport: {fileID: 3434070863280047002, guid: 92a0e6b3898fc2b4294c52396111d8a1,
+    type: 3}
+  XPForClick: 10
+  HPForClick: 10
+  ClicksForDestroy: 3
+  SecondSceneTeleport: {fileID: 3263030199462776132, guid: 9a7443a333d4a834db6493dfad6929ff,
+    type: 3}
+  TypeOfSpawn: 0
+  _objectsPrefabs:
+  - {fileID: 5000404749325083917, guid: 0cb9b314248a1e04ba7fe37634608035, type: 3}
+  - {fileID: 1111523220577843501, guid: b31ed684d0967bd4ca910ada44597016, type: 3}
+  - {fileID: 4689793328284019950, guid: 45e9fda7e629a9e4b8b65f5f9f6f22f8, type: 3}
+  - {fileID: 2707834379431602387, guid: 0439b3b4f5299844ca6b293fd3f51583, type: 3}
+  - {fileID: 5252840098823544974, guid: cf870210a52aaa3459917ffde0d87797, type: 3}
+  - {fileID: 4648915582525631375, guid: 49dc48d331db8674497e87868e568810, type: 3}
+  - {fileID: 4670557033716540009, guid: 92507b5f944a91241a40a8b18e56a60f, type: 3}
+  - {fileID: 1107547396652439721, guid: 4ec0088edc393564db55f260a4d8e545, type: 3}
+  - {fileID: 3434070863280047002, guid: 92a0e6b3898fc2b4294c52396111d8a1, type: 3}
+  - {fileID: 3263030199462776132, guid: 265a36d26430f3e4d8bde211e4c4cdba, type: 3}

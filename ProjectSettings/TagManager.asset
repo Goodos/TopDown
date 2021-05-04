@@ -6,6 +6,11 @@ TagManager:
   tags:
   - ShowInfoObject
   - Ground
+  - ForDestroyObject
+  - ForXPObject
+  - ForHurtObject
+  - TestOfXP
+  - ForTeleport
   layers:
   - Default
   - TransparentFX
@@ -15,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - AreaLayer
   - 
   - 
   - 
