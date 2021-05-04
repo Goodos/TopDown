@@ -14,7 +14,7 @@ public class InteractiveObject : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 100f, _ignoreMe))
         {
-            if (hit.transform.CompareTag(name))// && hit.collider.GetType() == typeof(BoxCollider)
+            if (hit.transform.CompareTag(name))
             {
                 Debug.Log("This is a " + name);
                 return true;
