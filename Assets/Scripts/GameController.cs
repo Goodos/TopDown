@@ -8,8 +8,8 @@ public class GameController : MonoBehaviour
     public static GameController singleton { get; private set; }
 
     public Data Data;
-    public bool IsFirstTeleport = true;
-    public UnityAction GameOverAction;
+    [HideInInspector] public static bool IsNewGame = false;
+    [HideInInspector] public UnityAction GameOverAction;
 
     [SerializeField] private GameObject _player;
 
@@ -25,7 +25,6 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-        
         if (!singleton)
         {
             singleton = this;
@@ -38,7 +37,6 @@ public class GameController : MonoBehaviour
             {
                 Data.RandomSpawn();
             }
-            NewGame();
         }
         else
         {
@@ -63,8 +61,9 @@ public class GameController : MonoBehaviour
         SecondSceneTeleportPos = Data.SecondSceneTeleport.transform.position;
     }
 
-    void NewGame()
+    public void NewGame()
     {
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
         CanMove = true;
         _player.GetComponent<Player>().HP = Data.StartHP;
         _player.GetComponent<Player>().XP = Data.StartXP;

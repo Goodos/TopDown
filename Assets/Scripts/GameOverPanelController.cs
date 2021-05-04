@@ -15,6 +15,7 @@ public class GameOverPanelController : MonoBehaviour
 
     void RestartGame()
     {
+        GameController.singleton.NewGame();
         SceneManager.LoadScene("GameScene");
     }
 }

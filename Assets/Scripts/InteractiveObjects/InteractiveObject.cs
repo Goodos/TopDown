@@ -16,7 +16,6 @@ public class InteractiveObject : MonoBehaviour
         {
             if (hit.transform.CompareTag(name))
             {
-                Debug.Log("This is a " + name);
                 return true;
             }
             else

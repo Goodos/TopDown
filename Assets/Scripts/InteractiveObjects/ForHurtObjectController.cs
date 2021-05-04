@@ -33,7 +33,6 @@ public class ForHurtObjectController : InteractiveObject
                 if (_player.GetComponent<Player>().HP == 0)
                 {
                     GameController.singleton.GameOverAction.Invoke();
-                    Debug.Log("you died");
                 }
             }
         }

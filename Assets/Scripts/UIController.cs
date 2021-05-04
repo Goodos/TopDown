@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
@@ -9,11 +7,13 @@ public class UIController : MonoBehaviour
     [SerializeField] private Text _currHP;
     [SerializeField] private GameObject _gameOverPanel;
     private GameObject _player;
+    private Transform _canvas;
 
 
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
+        _canvas = gameObject.transform;
         GameController.singleton.GameOverAction += ShowGameOverPanel;
     }
 
@@ -25,6 +25,6 @@ public class UIController : MonoBehaviour
 
     void ShowGameOverPanel()
     {
-        Instantiate(_gameOverPanel,transform);
+        Instantiate(_gameOverPanel, _canvas);
     }
 }

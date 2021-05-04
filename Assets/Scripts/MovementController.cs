@@ -20,6 +20,7 @@ public class MovementController : Player
 
     void Update()
     {
+        Debug.Log(GameController.singleton.CanMove);
         if (!GameController.singleton.CanMove)
         {
             _targetToMove = transform.position;
