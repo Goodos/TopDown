@@ -19,6 +19,8 @@ public class Data : ScriptableObject
     private List<Vector3> _objectPositions = new List<Vector3>();
 
     [Header("Настройки значений")]
+    public int StartHP;
+    public int StartXP;
     public int XPForClick;
     public int HPForClick;
     public int ClicksForDestroy;

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int HP;
-    public int XP; //???
+    [HideInInspector] public int HP;
+    [HideInInspector] public int XP;
 }

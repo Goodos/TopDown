@@ -14,11 +14,12 @@ public class MovementController : Player
         _cc = GetComponent<CharacterController>();
         _ignoreMe = 1 << 8;
         _ignoreMe = ~_ignoreMe;
+        GameController.singleton.GameOverAction += StopMovement;
+        GameController.singleton.CanMove = true;
     }
 
     void Update()
     {
-        //Debug.Log(HP);
         if (!GameController.singleton.CanMove)
         {
             _targetToMove = transform.position;
@@ -61,5 +62,10 @@ public class MovementController : Player
         {
             transform.position = _targetPosition;
         }
+    }
+
+    void StopMovement()
+    {
+        GameController.singleton.CanMove = false;
     }
 }

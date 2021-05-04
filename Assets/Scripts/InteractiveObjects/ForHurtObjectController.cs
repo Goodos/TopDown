@@ -20,12 +20,17 @@ public class ForHurtObjectController : InteractiveObject
     {
         _isInteractive = _areaController.InArea;
         _player = _areaController.Player;
+        
         if (_isInteractive && Input.GetMouseButtonDown(0))
         {
+            if (_player.GetComponent<Player>().HP < 0)
+            {
+                _isInteractive = false;
+            }
             if (IsOurObject(_tag))
             {
                 _player.GetComponent<Player>().HP -= _minusHPForClick;
-                if (_player.GetComponent<Player>().HP <= 0)
+                if (_player.GetComponent<Player>().HP == 0)
                 {
                     GameController.singleton.GameOverAction.Invoke();
                     Debug.Log("you died");

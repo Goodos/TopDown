@@ -19,7 +19,7 @@ public class UIController : MonoBehaviour
 
     void Update()
     {
-        _currHP.text = "HP = " +_player.GetComponent<Player>().HP.ToString();
+        _currHP.text = "HP = " + (_player.GetComponent<Player>().HP < 0 ? 0 : _player.GetComponent<Player>().HP).ToString();
         _currXP.text = "XP = " + _player.GetComponent<Player>().XP.ToString();
     }
 

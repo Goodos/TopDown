@@ -12,16 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f8edf37bd24c5a4f8c83c1a1bce54b5, type: 3}
   m_Name: Data
   m_EditorClassIdentifier: 
-  FirstSceneTeleport: {fileID: 3263030199462776132, guid: 265a36d26430f3e4d8bde211e4c4cdba,
-    type: 3}
-  FirstTeleport: {fileID: 4648915582525631375, guid: 49dc48d331db8674497e87868e568810,
-    type: 3}
-  SecondTeleport: {fileID: 4670557033716540009, guid: 92507b5f944a91241a40a8b18e56a60f,
-    type: 3}
-  ThirdTeleport: {fileID: 1107547396652439721, guid: 4ec0088edc393564db55f260a4d8e545,
-    type: 3}
-  FourthTeleport: {fileID: 3434070863280047002, guid: 92a0e6b3898fc2b4294c52396111d8a1,
-    type: 3}
+  FirstSceneTeleport: {fileID: 0}
+  FirstTeleport: {fileID: 0}
+  SecondTeleport: {fileID: 0}
+  ThirdTeleport: {fileID: 0}
+  FourthTeleport: {fileID: 0}
+  StartHP: 40
+  StartXP: 0
   XPForClick: 10
   HPForClick: 10
   ClicksForDestroy: 3

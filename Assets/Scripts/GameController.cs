@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        
         if (!singleton)
         {
             singleton = this;
@@ -36,7 +37,8 @@ public class GameController : MonoBehaviour
             else
             {
                 Data.RandomSpawn();
-            }           
+            }
+            NewGame();
         }
         else
         {
@@ -48,7 +50,6 @@ public class GameController : MonoBehaviour
         {
             Instantiate(_player);
         }
-        
     }
 
     void Start()
@@ -62,9 +63,11 @@ public class GameController : MonoBehaviour
         SecondSceneTeleportPos = Data.SecondSceneTeleport.transform.position;
     }
 
-    void Update()
+    void NewGame()
     {
-
+        CanMove = true;
+        _player.GetComponent<Player>().HP = Data.StartHP;
+        _player.GetComponent<Player>().XP = Data.StartXP;
     }
 
     public IEnumerator DisableMovement()
